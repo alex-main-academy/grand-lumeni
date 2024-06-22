@@ -1,0 +1,106 @@
+.header {
+    padding-top: 3.75rem;
+    padding-bottom: 5.4rem;
+    color: #043C53;
+}
+
+.header .container {
+    display: flex;
+    align-items: center;
+}
+
+.header__logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .9rem;
+
+    span {
+        font-family: 'Gilroy';
+        font-size: 1.4rem;
+        color: #043C53;
+        line-height: 1.3;
+    }
+}
+
+.logo__top {
+    display: flex;
+    align-items: flex-end;
+    gap: .3rem;
+}
+
+.header__navigation {
+    margin-left: 6.5rem;
+}
+
+.header__list {
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+}
+
+.header__link {
+    position: relative;
+    font-family: 'Relaway', sans-serif;
+    font-size: 2rem;
+    text-decoration: none;
+    font-weight: 500;
+
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: -.3rem;
+        left: 0;
+        width: 100%;
+        height: .2rem;
+        background-color: #043C53;
+        transition-duration: $anim-time;
+        opacity: 0;
+    }
+
+    &:hover {
+        &::before {
+            opacity: 1;
+        }
+    }
+}
+
+.header__phone {
+    margin-left: 5.2rem;
+    font-size: 2.8rem;
+    font-family: $font-second;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.header__languages {
+    margin-left: 2rem;
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+
+    border: .1rem solid #E6EEF3;
+    background-color: #FFFFFF;
+    border-radius: 2rem;
+    padding-right: 1.2rem;
+}
+
+.language__link {
+    color: #515153;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: 600;
+    font-family: 'Source Sans Pro';
+    line-height: 1;
+
+    &.active {
+        padding: 1.2rem 2.1rem;
+        background-color: #043C53;
+        border-radius: 2rem;
+        color: #F9DEBE;
+    }
+}
+
+.header__instagram {
+    margin-left: auto;
+}

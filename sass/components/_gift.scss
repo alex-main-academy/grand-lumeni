@@ -1,0 +1,51 @@
+.gift {
+    position: relative;
+    margin-top: 36rem;
+    background-color: #BDA078;
+    padding: 1.8rem 3.2rem 2rem 3.2rem;
+}
+
+.gift__title {
+    font-family: 'Ortica Linear';
+    font-size: 3.4rem;
+    color: #FFFFFF;
+    font-weight: 400;
+    text-transform: uppercase;
+    max-width: 61rem;
+    letter-spacing: -.068rem;
+    margin-bottom: 4.6rem;
+}
+
+.gift__sertificat {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    padding: 1.8rem 4.3rem;
+    border-radius: .8rem;
+    background-color: #000000;
+    border: .1rem solid #000000;
+
+    color: #FFFFFF;
+    font-family: $font-second;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.4;
+
+    img {
+        transition-duration: $anim-time;
+        transition-property: transform;
+    }
+
+    &:hover {
+        img {
+            transform: translateX(.5rem);
+        }
+    }
+}
+
+.gift__image {
+    position: absolute;
+    top: -7.5rem;
+    right: 3.4rem;
+}
