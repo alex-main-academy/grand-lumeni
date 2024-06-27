@@ -8,19 +8,23 @@ body {
     line-height: 1.2;
 }
 
+.page__wrapper {
+    overflow: hidden;
+}
+
 .container {
     max-width: 128rem;
     margin: 0 auto;
 
     @media screen and (max-width: $breakpoint-xl) {
-        max-width: 96rem;
+        max-width: 113rem;
     }
 
     @media screen and (max-width: $breakpoint-md) {
-        max-width: 69rem;
+        max-width: 73rem;
     }
 
     @media screen and (max-width: $breakpoint-sm) {
-        max-width: 32rem;
+        max-width: 35rem;
     }
 }

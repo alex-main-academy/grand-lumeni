@@ -1,5 +1,9 @@
 .faq {
     padding-bottom: 8.2rem;
+
+    @media screen and (max-width: $breakpoint-sm) {
+        padding-bottom: 6.5rem;
+    }
 }
 
 .faq__title {
@@ -9,12 +13,30 @@
     line-height: 1;
     text-transform: uppercase;
     margin-bottom: 3rem;
+
+    @media screen and (max-width: $breakpoint-md) {
+        font-size: 4rem;
+    }
+
+    @media screen and (max-width: $breakpoint-sm) {
+        font-size: 3.2rem;
+        margin-bottom: 4rem;
+    }
 }
 
 .faq__content {
     display: flex;
     align-items: flex-start;
     gap: 4rem;
+
+    @media screen and (max-width: $breakpoint-md) {
+        flex-direction: column;
+        gap: 1.3rem;
+    }
+
+    @media screen and (max-width: $breakpoint-sm) {
+        gap: 0;
+    }
 }
 
 .faq__list {
@@ -22,6 +44,16 @@
     flex-direction: column;
     gap: 1.3rem;
     width: 100%;
+
+    @media screen and (max-width: $breakpoint-sm) {
+        gap: 0;
+    }
+
+    @media screen and (max-width: $breakpoint-sm) {
+        &:last-of-type {
+            border-bottom: .1rem solid #9E8464;
+        }
+    }
 }
 
 .faq__item {
@@ -48,6 +80,13 @@
         svg {
             transform: rotate(180deg);
         }
+    }
+
+    @media screen and (max-width: $breakpoint-sm) {
+        border-left: none;
+        border-right: none;
+        border-bottom: none;
+        padding: 2rem 0;
     }
 }
 

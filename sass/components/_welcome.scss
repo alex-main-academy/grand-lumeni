@@ -1,15 +1,41 @@
 .welcome {
     padding-bottom: 12.7rem;
+
+    @media screen and (max-width: $breakpoint-md) {
+        padding-bottom: 7.8rem;
+    }
 }
 
 .welcome .container {
     display: flex;
     align-items: stretch;
     gap: 3.5rem;
+
+    @media screen and (max-width: $breakpoint-md) {
+        flex-direction: column-reverse;
+        gap: 5rem;
+    }
+
+    @media screen and (max-width: $breakpoint-sm) {
+        gap: 8rem;
+    }
+}
+
+.welcome__left {
+    @media screen and (max-width: $breakpoint-md) {
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 4rem;
+    }
 }
 
 .welcome__left_image {
     margin-bottom: 2rem;
+
+    @media screen and (max-width: $breakpoint-md) {
+        width: 100%;
+        margin-bottom: 0;
+    }
 }
 
 .welcome__list {
@@ -17,14 +43,31 @@
     align-items: flex-start;
     justify-content: space-between;
     gap: 2rem;
+
+    @media screen and (max-width: $breakpoint-sm) {
+        flex-wrap: wrap;
+        column-gap: 2.2rem;
+        row-gap: 2rem;
+        justify-content: center;
+    }
 }
 
 .welcome__item {
     text-align: center;
+
+    @media screen and (max-width: $breakpoint-sm) {
+        width: calc((100% - 4.4rem) / 3);
+    }
 }
 
 .welcome__icon {
     margin: 0 auto 1.2rem auto;
+
+    @media screen and (max-width: $breakpoint-sm) {
+        width: 5.2rem;
+        height: 5.2rem;
+        margin-bottom: .5rem;
+    }
 }
 
 .welcome__feature {
@@ -34,6 +77,10 @@
     font-weight: 500;
     line-height: 1.4;
     text-align: center;
+
+    @media screen and (max-width: $breakpoint-sm) {
+        font-size: 1.4rem;
+    }
 }
 
 .welcome__right {
@@ -44,6 +91,14 @@
 
 .welcome__right_image {
     margin-top: auto;
+
+    @media screen and (max-width: $breakpoint-xl) {
+        max-width: 100%;
+    }
+
+    @media screen and (max-width: $breakpoint-md) {
+        display: none;
+    }
 }
 
 .welcome__title {
@@ -52,6 +107,16 @@
     font-size: 4.2rem;
     text-transform: uppercase;
     margin-bottom: 8.8rem;
+
+    @media screen and (max-width: $breakpoint-md) {
+        font-size: 4rem;
+        margin-bottom: 5rem;
+    }
+
+    @media screen and (max-width: $breakpoint-sm) {
+        font-size: 3.2rem;
+        margin-bottom: 2rem;
+    }
 }
 
 .welcome__desc {
@@ -60,6 +125,11 @@
     line-height: 1.9;
     max-width: 61rem;
     margin-bottom: 6.9rem;
+
+    @media screen and (max-width: $breakpoint-md) {
+        margin-bottom: 4rem;
+        margin-bottom: 2.9rem;
+    }
 }
 
 .welcome__sertificat {
@@ -87,5 +157,36 @@
         &::before {
             opacity: 0;
         }
+    }
+
+    @media screen and (max-width: $breakpoint-sm) {
+        display: none;
+    }
+}
+
+.welcome__slider {
+    display: none;
+    align-items: stretch;
+
+    @media screen and (max-width: $breakpoint-sm) {
+        display: flex;
+        overflow: hidden;
+    }
+}
+
+.welcome__slide {
+    width: calc((100% - 3rem) / 3) !important;
+
+    img {
+        max-width: 100%;
+    }
+}
+
+.welcome__pagination {
+    margin-top: 2rem;
+    display: none;
+
+    @media screen and (max-width: $breakpoint-sm) {
+        display: flex;
     }
 }

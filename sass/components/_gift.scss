@@ -1,8 +1,22 @@
 .gift {
+    @media screen and (max-width: $breakpoint-md) {
+        background-color: #BDA078;
+    }
+}
+
+.gift .container {
     position: relative;
     margin-top: 36rem;
     background-color: #BDA078;
     padding: 1.8rem 3.2rem 2rem 3.2rem;
+
+    @media screen and (max-width: $breakpoint-md) {
+        margin-top: 30rem;
+        padding-top: 4rem;
+        padding-bottom: 7rem;
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 
 .gift__title {
@@ -14,6 +28,19 @@
     max-width: 61rem;
     letter-spacing: -.068rem;
     margin-bottom: 4.6rem;
+
+    @media screen and (max-width: $breakpoint-xl) {
+        max-width: 55rem;
+    }
+
+    @media screen and (max-width: $breakpoint-md) {
+        text-align: center;
+        margin: 0 auto 2rem auto;
+    }
+
+    @media screen and (max-width: $breakpoint-sm) {
+        text-align: left;
+    }
 }
 
 .gift__sertificat {
@@ -42,10 +69,30 @@
             transform: translateX(.5rem);
         }
     }
+
+    @media screen and (max-width: $breakpoint-md) {
+        margin: 0 auto;
+    }
 }
 
 .gift__image {
     position: absolute;
     top: -7.5rem;
     right: 3.4rem;
+
+    @media screen and (max-width: $breakpoint-xl) {
+        width: 50rem;
+        top: -5rem;
+    }
+
+    @media screen and (max-width: $breakpoint-md) {
+        position: relative;
+        top: 0;
+        right: 0;
+        margin: 0 auto 4.3rem auto;
+    }
+
+    @media screen and (max-width: $breakpoint-sm) {
+        width: 100%;
+    }
 }

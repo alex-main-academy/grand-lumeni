@@ -1,0 +1,90 @@
+.slider__prev {
+    position: relative;
+    width: 4.2rem;
+    height: 4.2rem;
+    border: .1rem solid #0D95FF;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    left: auto;
+    background-image: url(../img/icons/icon-prev.svg);
+    background-size: 1.1rem;
+    background-repeat: no-repeat;
+    background-position: center left 1.7rem;
+    background-color: #F4FAFF;
+    transition-duration: $anim-time;
+    transition-property: border-color, background-color;
+    cursor: pointer;
+
+    &.swiper-button-disabled {
+        cursor: auto;
+        border-right: none;
+        opacity: 1;
+        border-color: #BCC2C7;
+        background-image: url(../img/icons/icon-prev-disabled.svg);
+        background-color: #FFFFFF;
+    }
+
+    &::after {
+        font-size: 0;
+    }
+
+    @media screen and (max-width: $breakpoint-sm) {
+        margin-top: 0;
+        top: 0;
+    }
+}
+
+.slider__next {
+    position: relative;
+    width: 4.2rem;
+    height: 4.2rem;
+    border: .1rem solid #0D95FF;
+    border-top-right-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    right: auto;
+    background-image: url(../img/icons/icon-next.svg);
+    background-size: 1.1rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #F4FAFF;
+    transition-duration: $anim-time;
+    transition-property: border-color, background-color;
+    cursor: pointer;
+
+    &.swiper-button-disabled {
+        border-left: none;
+        opacity: 1;
+        border-color: #BCC2C7;
+        background-image: url(../img/icons/icon-next-disabled.svg);
+        background-color: #FFFFFF;
+        cursor: auto;
+    }
+
+    &::after {
+        font-size: 0;
+    }
+
+    @media screen and (max-width: $breakpoint-sm) {
+        margin-top: 0;
+        top: 0;
+    }
+}
+
+.slider__pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .8rem;
+
+    .swiper-pagination-bullet {
+        width: 1.2rem;
+        height: 1.2rem;
+        margin: 0 !important;
+        background-color: #E6EEF3;
+        opacity: 1;
+    }
+
+    .swiper-pagination-bullet-active {
+        background-color: #7BB9E8;
+    }
+}

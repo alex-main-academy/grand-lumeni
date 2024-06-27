@@ -1,0 +1,138 @@
+.contact {
+    padding: 5rem 0;
+    background-color: #014661;
+    border-bottom: .1rem solid #F9DEBE;
+    color: #FFFFFF;
+
+    background-image: url(../img/contact/lines1.svg), url(../img/contact/lines2.svg);
+    background-repeat: no-repeat, repeat-x;
+    background-size: auto;
+    background-position: bottom -35.6rem left -7.1rem, bottom -22rem left .7rem;
+
+    @media screen and (max-width: $breakpoint-md) {
+        padding-top: 4rem;
+        padding-bottom: 27.1rem;
+    }
+
+    @media screen and (max-width: $breakpoint-sm) {
+        background-size: 150%;
+        background-position: bottom -7rem left, bottom -5rem left 15rem;
+    }
+}
+
+.contact .container {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+
+    @media screen and (max-width: $breakpoint-md) {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+    }
+}
+
+.contact__map {
+    @media screen and (max-width: $breakpoint-md) {
+        width: 100%;
+        margin-bottom: 4rem;
+    }
+}
+
+.contact__image {
+    border-radius: 2.2rem;
+
+    @media screen and (max-width: $breakpoint-md) {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+.contact__uptitle {
+    font-family: 'Gilroy';
+    font-size: 2.8rem;
+    line-height: 0.7;
+    margin-bottom: 2rem;
+
+    @media screen and (max-width: $breakpoint-md) {
+        display: none;
+    }
+}
+
+.contact__uptitle_mob {
+    display: none;
+
+    @media screen and (max-width: $breakpoint-md) {
+        display: block;
+        font-family: 'Gilroy';
+        font-size: 1.8rem;
+        line-height: 1;
+        color: #FFFFFF;
+        margin-bottom: 1rem;
+    }
+}
+
+.contact__title {
+    font-family: $font-title;
+    color: #F9DEBE;
+    font-size: 4.2rem;
+    line-height: 1;
+    text-transform: uppercase;
+    margin-bottom: 7rem;
+
+    @media screen and (max-width: $breakpoint-md) {
+        display: none;
+    }
+}
+
+.contact__title_mob {
+    display: none;
+
+    @media screen and (max-width: $breakpoint-md) {
+        display: block;
+        font-size: 3.2rem;
+        text-transform: uppercase;
+        line-height: 1.25;
+        font-family: $font-title;
+        color: #F9DEBE;
+        margin-bottom: 3rem;
+    }
+}
+
+.contact__list {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.contact__subtitle {
+    font-family: $font-second;
+    font-size: 2.4rem;
+    font-weight: 500;
+    line-height: 1.3;
+    margin-bottom: 1.2rem;
+}
+
+.contact__link {
+    display: block;
+    font-family: $font-second;
+    font-size: 1.8rem;
+    line-height: 1.8;
+    text-decoration: none;
+    transition-duration: $anim-time;
+    transition-property: color;
+
+    &.active {
+        color: #FFC280;
+    }
+}
+
+.contact__works {
+    font-family: $font-second;
+    font-size: 1.8rem;
+    line-height: 1.8;
+    text-decoration: none;
+    max-width: 27rem;
+}

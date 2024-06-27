@@ -7,6 +7,22 @@
     background-repeat: no-repeat;
     background-size: 129rem, auto;
     background-position: bottom 38.7rem left, top right;
+
+    @media screen and (max-width: $breakpoint-xl) {
+        background-position: bottom 30rem left, top right;
+        padding-bottom: 18rem;
+    }
+
+    @media screen and (max-width: $breakpoint-md) {
+        background-image: url(../img/service/lines-bottom.svg);
+        padding-bottom: 0;
+        background-position: bottom 42rem left;
+    }
+
+    @media screen and (max-width: $breakpoint-sm) {
+        padding-top: 6rem;
+        background-position: bottom 42rem left -5rem;
+    }
 }
 
 .service__title {
@@ -17,6 +33,11 @@
     text-transform: uppercase;
     text-align: center;
     margin-bottom: .9rem;
+
+    @media screen and (max-width: $breakpoint-sm) {
+        font-size: 3.2rem;
+        margin-bottom: 1rem;
+    }
 }
 
 .service__subtitle {
@@ -27,6 +48,15 @@
     line-height: 1.65;
     text-align: center;
     margin-bottom: 3rem;
+
+    @media screen and (max-width: $breakpoint-md) {
+        max-width: 60rem;
+        margin: 0 auto 3rem auto;
+    }
+
+    @media screen and (max-width: $breakpoint-sm) {
+        margin-bottom: 1.4rem;
+    }
 }
 
 .service__categories {
@@ -35,6 +65,16 @@
     justify-content: center;
     gap: 6.5rem;
     margin-bottom: 6rem;
+
+    @media screen and (max-width: $breakpoint-md) {
+        gap: 3rem;
+    }
+
+    @media screen and (max-width: $breakpoint-sm) {
+        flex-wrap: wrap;
+        gap: 2rem;
+        margin-bottom: 6.9rem;
+    }
 }
 
 .service__category {
@@ -49,6 +89,14 @@
     transition-duration: $anim-time;
     transition-property: color;
 
+    @media screen and (max-width: $breakpoint-md) {
+        transition-property: background-color;
+        padding: .5rem 1.3rem;
+        background-color: #BCC2C7;
+        border-radius: .8rem;
+        color: #F0F0F1;
+    }
+
     &::before {
         content: '';
         position: absolute;
@@ -61,6 +109,10 @@
 
         transition-duration: $anim-time;
         transition-property: opacity;
+
+        @media screen and (max-width: $breakpoint-md) {
+            display: none;
+        }
     }
 
     &.active {
@@ -68,6 +120,10 @@
 
         &::before {
             opacity: 1;
+        }
+
+        @media screen and (max-width: $breakpoint-md) {
+            background-color: #9E8464;
         }
     }
 
@@ -89,6 +145,10 @@
     &.active {
         display: flex;
     }
+
+    @media screen and (max-width: $breakpoint-md) {
+        column-gap: 4rem;
+    }
 }
 
 .service__item {
@@ -96,6 +156,14 @@
     border-bottom: .1rem solid #FFFFFF;
     padding-bottom: 2rem;
     color: #FFFFFF;
+
+    @media screen and (max-width: $breakpoint-md) {
+        width: calc((100% - 4rem) / 2);
+    }
+
+    @media screen and (max-width: $breakpoint-sm) {
+        width: 100%;
+    }
 }
 
 .service__item_header {

@@ -2,6 +2,31 @@
     padding-top: 3.75rem;
     padding-bottom: 5.4rem;
     color: #043C53;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #FFFFFF;
+    z-index: 100;
+    transition-duration: $anim-time;
+    transition-property: padding;
+
+    &.is-fixed {
+        padding: 1.2rem 0;
+        border-bottom: .1rem solid #e6e6e6;
+    }
+
+    @media screen and (max-width: $breakpoint-xl) {
+        padding: 3rem 0;
+    }
+
+    @media screen and (max-width: $breakpoint-md) {
+        padding: 2rem 0;
+
+        &.is-fixed {
+            padding: 1rem 0;
+        }
+    }
 }
 
 .header .container {
@@ -15,11 +40,38 @@
     align-items: center;
     gap: .9rem;
 
+    @media screen and (max-width: $breakpoint-xl) {
+        gap: .5rem;
+    }
+
+    @media screen and (max-width: $breakpoint-md) {
+        gap: .9rem;
+    }
+
     span {
         font-family: 'Gilroy';
         font-size: 1.4rem;
         color: #043C53;
         line-height: 1.3;
+
+        @media screen and (max-width: $breakpoint-xl) {
+            font-size: 1.2rem;
+        }
+
+        @media screen and (max-width: $breakpoint-md) {
+            font-size: 1.8rem;
+        }
+    }
+}
+
+.header__logo_img {
+    @media screen and (max-width: $breakpoint-xl) {
+        width: 15rem;
+        height: auto;
+    }
+
+    @media screen and (max-width: $breakpoint-md) {
+        width: 19.7rem;
     }
 }
 
@@ -31,6 +83,14 @@
 
 .header__navigation {
     margin-left: 6.5rem;
+
+    @media screen and (max-width: $breakpoint-xl) {
+        margin-left: 4rem;
+    }
+
+    @media screen and (max-width: $breakpoint-md) {
+        display: none;
+    }
 }
 
 .header__list {
@@ -71,6 +131,15 @@
     font-family: $font-second;
     font-weight: 600;
     text-decoration: none;
+
+    @media screen and (max-width: $breakpoint-xl) {
+        font-size: 2.2rem;
+        margin-left: 4rem;
+    }
+
+    @media screen and (max-width: $breakpoint-md) {
+        display: none;
+    }
 }
 
 .header__languages {
@@ -83,6 +152,10 @@
     background-color: #FFFFFF;
     border-radius: 2rem;
     padding-right: 1.2rem;
+
+    @media screen and (max-width: $breakpoint-md) {
+        display: none;
+    }
 }
 
 .language__link {
@@ -103,4 +176,17 @@
 
 .header__instagram {
     margin-left: auto;
+
+    @media screen and (max-width: $breakpoint-md) {
+        display: none;
+    }
+}
+
+.header__burger {
+    display: none;
+
+    @media screen and (max-width: $breakpoint-md) {
+        display: block;
+        margin-left: auto;
+    }
 }

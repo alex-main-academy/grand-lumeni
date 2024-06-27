@@ -1,5 +1,37 @@
 .team {
     padding-top: 13.2rem;
+
+    @media screen and (max-width: $breakpoint-md) {
+        padding-top: 11rem;
+        padding-bottom: 10rem;
+        background-image: url(../../img/prepare/lines.png);
+        background-repeat: repeat-x;
+        background-size: 100%;
+        background-position: top -12rem left -15rem;
+    }
+
+    @media screen and (max-width: $breakpoint-sm) {
+        background-position: top -5rem left -6rem;
+        padding-bottom: 8rem;
+    }
+}
+
+.team .container {
+    position: relative;
+}
+
+.team__buttons {
+    position: absolute;
+    top: 2.9rem;
+    right: 0;
+    display: flex;
+
+    @media screen and (max-width: $breakpoint-sm) {
+        position: relative;
+        top: auto;
+        justify-content: flex-end;
+        margin-bottom: 3.1rem;
+    }
 }
 
 .team__uptitle {
@@ -7,6 +39,11 @@
     font-size: 2.8rem;
     line-height: 0.7;
     margin-bottom: 1rem;
+
+    @media screen and (max-width: $breakpoint-sm) {
+        font-size: 1.8rem;
+        margin-bottom: 0;
+    }
 }
 
 .team__title {
@@ -16,6 +53,15 @@
     line-height: 1;
     text-transform: uppercase;
     margin-bottom: 1.2rem;
+
+    @media screen and (max-width: $breakpoint-md) {
+        font-size: 4rem;
+    }
+
+    @media screen and (max-width: $breakpoint-sm) {
+        font-size: 3.2rem;
+        margin-bottom: 2rem;
+    }
 }
 
 .team__subtitle {
@@ -25,14 +71,23 @@
     font-weight: 500;
     line-height: 1.4;
     margin-bottom: 5.2rem;
+
+    @media screen and (max-width: $breakpoint-sm) {
+        margin-bottom: 3rem;
+    }
+}
+
+.team__slider_wrapper {
+    padding: 0 4rem;
+
+    @media screen and (max-width: $breakpoint-md) {
+        padding: 0;
+    }
 }
 
 .team__list {
     display: flex;
     align-items: stretch;
-    gap: 3rem;
-    flex-wrap: wrap;
-    padding: 0 4rem;
 }
 
 .team__item {
@@ -42,6 +97,10 @@
 .team__image {
     width: 100%;
     margin-bottom: 1rem;
+
+    @media screen and (max-width: $breakpoint-sm) {
+        margin-bottom: 2rem;
+    }
 }
 
 .team__name {
@@ -53,10 +112,23 @@
     padding-bottom: 2.4rem;
     border-bottom: .1rem solid #C8CCD1;
     margin-bottom: 1.2rem;
+
+    @media screen and (max-width: $breakpoint-md) {
+        font-size: 2rem;
+    }
 }
 
 .team__special {
     font-family: $font-second;
     font-size: 1.6rem;
     line-height: 1.1;
+}
+
+.team__pagination {
+    display: none;
+
+    @media screen and (max-width: $breakpoint-md) {
+        display: flex;
+        margin-top: 3rem;
+    }
 }

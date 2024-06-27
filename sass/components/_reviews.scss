@@ -1,15 +1,33 @@
 .reviews {
     padding-bottom: 17.3rem;
+
+    @media screen and (max-width: $breakpoint-xl) {
+        padding-bottom: 12rem;
+    }
+
+    @media screen and (max-width: $breakpoint-md) {
+        padding-bottom: 8rem;
+    }
 }
 
 .reviews .container {
     display: flex;
     align-items: flex-start;
     gap: 2rem;
+
+    @media screen and (max-width: $breakpoint-md) {
+        flex-direction: column;
+        gap: 0;
+    }
 }
 
 .reviews__content {
     max-width: 30.2rem;
+
+    @media screen and (max-width: $breakpoint-md) {
+        width: 100%;
+        max-width: none;
+    }
 }
 
 .reviews__title {
@@ -19,6 +37,17 @@
     font-size: 4.2rem;
     line-height: 1;
     margin-bottom: 2rem;
+
+    @media screen and (max-width: $breakpoint-md) {
+        width: auto;
+        font-size: 4rem;
+    }
+
+
+    @media screen and (max-width: $breakpoint-sm) {
+        font-size: 4.2rem;
+        margin-bottom: 1rem;
+    }
 }
 
 .reviews__subtitle {
@@ -26,7 +55,23 @@
     font-size: 1.6rem;
     font-weight: 500;
     line-height: 1.4;
-    margin-bottom: 17.2rem;
+    margin-bottom: 4rem;
+
+
+    @media screen and (max-width: $breakpoint-md) {
+        margin-bottom: 2rem;
+    }
+}
+
+.reviews__buttons {
+    display: flex;
+    height: 4.2rem;
+    margin-bottom: 9rem;
+
+    @media screen and (max-width: $breakpoint-md) {
+        justify-content: flex-end;
+        margin-bottom: 2rem;
+    }
 }
 
 .reviews__add {
@@ -47,13 +92,25 @@
         color: #000000;
         background-color: transparent;
     }
+
+    @media screen and (max-width: $breakpoint-md) {
+        display: none;
+    }
+}
+
+.reviews__add_mob {
+    display: none;
+
+
+    @media screen and (max-width: $breakpoint-md) {
+        display: block;
+        margin: 7rem auto 0 auto;
+    }
 }
 
 .reviews__list {
     display: flex;
     align-items: stretch;
-    gap: 1.7rem;
-    flex-wrap: wrap;
     width: 100%;
 }
 
@@ -62,7 +119,15 @@
     padding: 5.2rem;
     background-color: #FFFFFF;
     border-radius: .8rem;
-    box-shadow: 0 .2rem 2.2rem 0 rgba(0, 0, 0, 0.08);
+    border: .1rem solid rgba(0, 0, 0, 0.08);
+
+    @media screen and (max-width: $breakpoint-md) {
+        width: 100%;
+    }
+
+    @media screen and (max-width: $breakpoint-sm) {
+        padding: 4rem;
+    }
 }
 
 .reviews__name {

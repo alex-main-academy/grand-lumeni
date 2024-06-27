@@ -1,17 +1,89 @@
+.hero {
+    padding-top: 15.6rem;
+
+    @media screen and (max-width: $breakpoint-xl) {
+        padding-top: 11rem;
+    }
+}
+
 .hero__wrapper {
     display: flex;
     align-items: stretch;
+
+    @media screen and (max-width: $breakpoint-md) {
+        background-color: #043C53;
+        background-image: url(../img/hero/bg-lines-top.svg), url(../img/hero/bg-lines.svg);
+        background-size: auto;
+        background-repeat: no-repeat, repeat-x;
+        background-position: top -15rem left -40rem, bottom left;
+        width: 100%;
+        border-right: 1.6rem solid #BDA078;
+    }
+
+    @media screen and (max-width: $breakpoint-sm) {
+        border-width: 1.3rem;
+        background-image: url(../../img/hero/bg-lines-top.svg);
+        background-position: top -15rem left -40rem;
+    }
+}
+
+.hero__image {
+    @media screen and (max-width:1400px) {
+        min-width: 55rem;
+        height: 80rem;
+        width: 55rem;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    @media screen and (max-width: $breakpoint-xl) {
+        min-width: 50rem;
+        width: 50rem;
+        height: 75rem;
+    }
+
+    @media screen and (max-width: $breakpoint-md) {
+        display: none;
+    }
 }
 
 .hero__content {
-    background-image: url(../img/hero/bg-lines.svg), url(../img/hero/bg-dark.webp);
-    background-repeat: no-repeat;
-    background-size: 100%, cover;
-    background-position: bottom left, top left;
+    background-color: #043C53;
+    background-image: url(../img/hero/bg-lines-top.svg), url(../img/hero/bg-lines.svg);
+    background-size: auto;
+    background-repeat: no-repeat, repeat-x;
+    background-position: top -15rem left -40rem, bottom left;
     width: 100%;
     border-right: 1.6rem solid #BDA078;
     padding-top: 13.1rem;
     padding-left: 9.2rem;
+
+    @media screen and (max-width: $breakpoint-xl) {
+        padding-top: 10rem;
+        padding-left: 6rem;
+        border-right-width: 1.2rem;
+    }
+
+    @media screen and (max-width: $breakpoint-md) {
+        max-width: 73rem;
+        margin: 0 auto;
+        background-image: none;
+        border: none;
+        background-color: transparent;
+        padding-left: 0;
+        padding-bottom: 7rem;
+    }
+
+    @media screen and (max-width: $breakpoint-sm) {
+        max-width: 35rem;
+        padding-top: 8.8rem;
+        padding-bottom: 7.4rem;
+    }
 }
 
 .hero__uptitle {
@@ -20,6 +92,10 @@
     line-height: 0.7;
     color: #FFFFFF;
     margin-bottom: 1rem;
+
+    @media screen and (max-width: $breakpoint-sm) {
+        margin-bottom: 2rem;
+    }
 }
 
 .hero__title {
@@ -29,6 +105,11 @@
     text-transform: uppercase;
     max-width: 60.5rem;
     margin-bottom: .4rem;
+
+    @media screen and (max-width: $breakpoint-sm) {
+        font-size: 4rem;
+        margin-bottom: 3rem;
+    }
 }
 
 .hero__desc {
@@ -37,6 +118,10 @@
     color: #FFFFFF;
     line-height: 1.6;
     margin-bottom: 12rem;
+
+    @media screen and (max-width: $breakpoint-sm) {
+        margin-bottom: 7rem;
+    }
 }
 
 .hero__buttons {
@@ -44,6 +129,13 @@
     align-items: stretch;
     gap: 4rem;
     margin-bottom: 1.9rem;
+
+    @media screen and (max-width: $breakpoint-sm) {
+        flex-direction: column;
+        gap: 3rem;
+        margin-bottom: 1rem;
+        align-items: flex-start;
+    }
 }
 
 .hero__button {
@@ -60,6 +152,14 @@
 
     &:hover {
         background-color: #BDA078;
+    }
+
+    @media screen and (max-width: $breakpoint-sm) {
+        width: auto;
+
+        &:nth-child(2) {
+            background-color: #BDA078;
+        }
     }
 }
 

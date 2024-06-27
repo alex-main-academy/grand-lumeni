@@ -1,6 +1,26 @@
 .stars {
     padding-top: 8.8rem;
     padding-bottom: 14.3rem;
+
+    @media screen and (max-width: $breakpoint-xl) {
+        padding-bottom: 10rem;
+    }
+
+    @media screen and (max-width: $breakpoint-md) {
+        padding: 6rem 0;
+    }
+}
+
+.stars__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+
+    @media screen and (max-width: $breakpoint-md) {
+        display: block;
+        margin-bottom: 0;
+    }
 }
 
 .stars__title {
@@ -9,14 +29,36 @@
     font-size: 4.2rem;
     line-height: 1;
     text-transform: uppercase;
-    margin-bottom: 4rem;
+
+    @media screen and (max-width: $breakpoint-md) {
+        font-size: 4rem;
+        max-width: 60rem;
+        line-height: 1.2;
+        margin-bottom: 3rem;
+    }
+
+    @media screen and (max-width: $breakpoint-sm) {
+        font-size: 3.2rem;
+        line-height: 1.4;
+    }
+}
+
+.stars__buttons {
+    position: relative;
+    display: flex;
+    height: 4.2rem;
+    width: 8.4rem;
+
+    @media screen and (max-width: $breakpoint-md) {
+        width: 100%;
+        justify-content: flex-end;
+        margin-bottom: 3rem;
+    }
 }
 
 .stars__list {
     display: flex;
     align-items: stretch;
-    gap: 2.1rem;
-    flex-wrap: wrap;
 }
 
 .stars__item {
@@ -26,6 +68,41 @@
     align-items: flex-start;
     max-height: 48.8rem;
     overflow: hidden;
+
+    @media screen and (max-width: $breakpoint-xl) {
+        max-height: 42rem;
+    }
+
+    @media screen and (max-width: $breakpoint-sm) {
+        flex-direction: column-reverse;
+        max-height: none;
+    }
+}
+
+.stars__image_wrapper {
+    min-width: 30.3rem;
+    height: 100%;
+
+    @media screen and (max-width: $breakpoint-xl) {
+        min-width: 25rem;
+    }
+
+    @media screen and (max-width: $breakpoint-md) {
+        min-width: 30rem;
+    }
+
+    @media screen and (max-width: $breakpoint-sm) {
+        min-width: none;
+        width: 100%;
+        height: auto;
+    }
+}
+
+.stars__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 .stars__content {
@@ -67,6 +144,10 @@
 .stars__text_wrapper {
     max-height: 35rem;
     max-width: 100%;
+
+    @media screen and (max-width: $breakpoint-xl) {
+        max-height: 28.3rem;
+    }
 }
 
 .stars__text {
@@ -86,4 +167,13 @@
     font-weight: 600;
     line-height: 1.75;
     text-decoration: underline;
+}
+
+.stars__pagination {
+    display: none;
+
+    @media screen and (max-width: $breakpoint-md) {
+        display: flex;
+        margin-top: 4rem;
+    }
 }
