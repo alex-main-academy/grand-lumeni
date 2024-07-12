@@ -78,7 +78,16 @@
 }
 
 .promo__item {
+    cursor: pointer;
     width: calc((100% - 4rem) / 3);
+
+    &:hover {
+        .promo__more {
+            img {
+                transform: translateX(.5rem);
+            }
+        }
+    }
 
     @media screen and (max-width: $breakpoint-md) {
         width: calc((100% - 2rem) / 2);
@@ -143,12 +152,6 @@
     img {
         transition-duration: $anim-time;
         transition-property: transform;
-    }
-
-    &:hover {
-        img {
-            transform: translateX(.5rem);
-        }
     }
 }
 

@@ -1,0 +1,124 @@
+.diplom {
+    background-image: linear-gradient(90deg, #EBEEFF 0%, #E9E9E9 100%);
+    display: block;
+    padding-top: 3.6rem;
+    padding-bottom: 2.8rem;
+    overflow: auto;
+
+    @media screen and (max-width: $breakpoint-sm) {
+        padding-top: 14.6rem;
+        padding-bottom: 0;
+        background-image: none;
+        background-color: #FFFFFF;
+    }
+}
+
+.diplom .container {
+    position: relative;
+}
+
+.diplom__close {
+    position: absolute;
+    right: 0;
+    top: -.6rem;
+
+    @media screen and (max-width: $breakpoint-sm) {
+        top: -11rem;
+        z-index: 1;
+
+        img {
+            width: 3.4rem;
+            height: 3.4rem;
+        }
+    }
+}
+
+.diplom__title {
+    font-size: 4.2rem;
+    text-transform: uppercase;
+    color: $color-title;
+    font-family: $font-title;
+    margin-bottom: 3.4rem;
+
+    @media screen and (max-width: $breakpoint-sm) {
+        font-size: 3.4rem;
+        text-align: center;
+        font-family: 'Ortica Linear';
+        margin-bottom: 3rem;
+    }
+}
+
+.diplom__slider {
+    width: 70.3rem;
+
+    @media screen and (max-width: $breakpoint-md) {
+        width: 50rem;
+    }
+
+    @media screen and (max-width: $breakpoint-sm) {
+        width: 29rem;
+    }
+}
+
+.diplom__image {
+    @media screen and (max-width: $breakpoint-md) {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.diplom__pagination {
+    margin-top: 3rem;
+
+    .swiper-pagination-bullet {
+        background-color: #FFFFFF;
+
+        @media screen and (max-width: $breakpoint-sm) {
+            background-color: #E6EEF3;
+        }
+    }
+
+    .swiper-pagination-bullet-active {
+        background-color: #7BB9E8;
+    }
+
+    @media screen and (max-width: $breakpoint-sm) {
+        margin-top: 3.9rem;
+    }
+}
+
+.diplom__navigation {
+    color: #7F868F;
+
+    @media screen and (max-width: $breakpoint-sm) {
+        &::after {
+            font-size: 3rem;
+        }
+    }
+}
+
+.diplom__prev {
+    margin-left: 7.1rem;
+
+    @media screen and (max-width: $breakpoint-md) {
+        margin-left: 4rem;
+    }
+
+    @media screen and (max-width: $breakpoint-sm) {
+        margin-left: 0;
+        left: 0;
+    }
+}
+
+.diplom__next {
+    margin-right: 7.1rem;
+
+    @media screen and (max-width: $breakpoint-md) {
+        margin-right: 4rem;
+    }
+
+    @media screen and (max-width: $breakpoint-sm) {
+        margin-right: 0;
+        right: 0;
+    }
+}

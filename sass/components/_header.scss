@@ -50,7 +50,7 @@
 
     span {
         font-family: 'Gilroy';
-        font-size: 1.4rem;
+        font-size: 1.8rem;
         color: #043C53;
         line-height: 1.3;
 
@@ -152,6 +152,15 @@
     background-color: #FFFFFF;
     border-radius: 2rem;
     padding-right: 1.2rem;
+    padding-left: 0;
+
+    &.ru {
+        padding-left: 1.2rem;
+    }
+
+    &.en {
+        padding-right: 0;
+    }
 
     @media screen and (max-width: $breakpoint-md) {
         display: none;

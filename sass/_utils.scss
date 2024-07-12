@@ -6,6 +6,10 @@ body {
     font-family: $font-main;
     color: $color-main;
     line-height: 1.2;
+
+    &.is-modal {
+        overflow: hidden;
+    }
 }
 
 .page__wrapper {

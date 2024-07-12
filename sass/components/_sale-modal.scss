@@ -1,0 +1,362 @@
+.sale__modal {
+    background-image: url(../img/sale-modal/bg.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top left -1rem;
+
+    align-items: flex-start;
+    padding-top: 3rem;
+    padding-bottom: 3.1rem;
+    overflow: hidden;
+    overflow-y: scroll;
+
+    @media screen and (max-width: $breakpoint-md) {
+        background-image: none;
+        background-color: #FFFFFF;
+        padding-top: 2rem;
+        padding-bottom: 2.8rem;
+    }
+}
+
+.sale__modal .container {
+    min-width: 128rem;
+    position: relative;
+
+    @media screen and (max-width: $breakpoint-xl) {
+        min-width: 113rem;
+    }
+
+    @media screen and (max-width: $breakpoint-md) {
+        min-width: 73rem;
+    }
+
+    @media screen and (max-width: $breakpoint-sm) {
+        min-width: 35rem;
+    }
+}
+
+.sale__modal_logo {
+    display: flex;
+    flex-direction: column;
+    gap: .9rem;
+
+    @media screen and (max-width: $breakpoint-md) {
+        gap: 0;
+    }
+
+    span {
+        font-family: 'Gilroy';
+        font-size: 2.2rem;
+        color: #043C53;
+        line-height: 1.3;
+        margin-left: 2rem;
+
+        @media screen and (max-width: $breakpoint-md) {
+            font-size: 1.8rem;
+            margin-left: 0;
+        }
+    }
+}
+
+.sale__modal_logo_img {
+    @media screen and (max-width: $breakpoint-md) {
+        width: 19.7rem;
+    }
+}
+
+.logo__top {
+    display: flex;
+    align-items: flex-end;
+    gap: .3rem;
+}
+
+.sale__modal_close {
+    position: absolute;
+    top: .5rem;
+    right: 0;
+
+    @media screen and (max-width: $breakpoint-md) {
+        top: 2rem;
+    }
+}
+
+.sale__modal_content {
+    width: 61.6rem;
+    margin-left: auto;
+    margin-top: 1.3rem;
+
+    @media screen and (max-width: $breakpoint-md) {
+        width: 100%;
+        margin-top: 10rem;
+    }
+}
+
+.sale__modal_title {
+    position: relative;
+    background-color: #9E8464;
+    border-radius: .4rem;
+    padding: 1.4rem 3rem;
+    text-align: center;
+    font-size: 2.8rem;
+    font-weight: 600;
+    line-height: 1.1;
+    color: #FFFFFF;
+    margin-bottom: 6.1rem;
+
+    @media screen and (max-width: $breakpoint-sm) {
+        text-align: left;
+        padding: 1.2rem 3.2rem;
+        margin-bottom: 1rem;
+    }
+}
+
+.sale__modal_image {
+    position: absolute;
+    right: -2.4rem;
+    bottom: -4.9rem;
+
+    @media screen and (max-width: $breakpoint-md) {
+        right: -2rem;
+        bottom: auto;
+        top: -8.9rem;
+    }
+}
+
+.sale__modal_sale {
+    position: absolute;
+    top: -4.8rem;
+    left: -16.4rem;
+
+    font-family: $font-second;
+    font-size: 14.8rem;
+    color: #D63639;
+    line-height: 1;
+    text-shadow:
+        -6px -6px 0 #FFFFFF,
+        6px -6px 0 #FFFFFF,
+        -6px 6px 0 #FFFFFF,
+        6px 6px 0 #FFFFFF;
+    font-weight: 700;
+
+    @media screen and (max-width: $breakpoint-md) {
+        font-size: 10rem;
+        left: 0;
+        top: -10rem;
+        line-height: 1.5;
+    }
+
+    @media screen and (max-width: $breakpoint-sm) {
+        top: -11.4rem;
+    }
+
+    small {
+        position: absolute;
+        font-size: 700;
+        font-size: 7rem;
+        text-shadow:
+            -3px -3px 0 #FFFFFF,
+            3px -3px 0 #FFFFFF,
+            -3px 3px 0 #FFFFFF,
+            3px 3px 0 #FFFFFF;
+
+        @media screen and (max-width: $breakpoint-md) {
+            font-size: 4rem;
+        }
+
+        @media screen and (max-width: $breakpoint-sm) {
+            top: 1.2rem;
+        }
+    }
+}
+
+.sale__modal_list {
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+    margin-bottom: 2.1rem;
+}
+
+.sale__modal_item {
+    display: flex;
+    align-items: center;
+}
+
+.sale__modal_service {
+    color: $color-dark;
+    font-size: 2.6rem;
+    font-weight: 600;
+    line-height: 1.1;
+
+    @media screen and (max-width: $breakpoint-sm) {
+        font-size: 2.2rem;
+        line-height: 1.3;
+    }
+}
+
+.sale__modal_dots {
+    color: #BCC2C7;
+    font-size: 1.2rem;
+    border-bottom: .1rem dotted #BCC2C7;
+    margin-top: 1.5rem;
+    margin-right: .8rem;
+    margin-left: 4rem;
+    flex-grow: 1;
+
+    @media screen and (max-width: $breakpoint-sm) {
+        margin-left: 2rem;
+    }
+}
+
+.sale__modal_price_old {
+    position: relative;
+    margin-left: auto;
+    color: $color-dark;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 0.9;
+    letter-spacing: .08rem;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: .1rem;
+        background-color: #D63639;
+        transform: rotate(-7.847deg);
+        left: 0;
+        top: .8rem;
+    }
+}
+
+.sale__modal_price_new {
+    margin-left: 1.5rem;
+    padding: 0 .65rem;
+    background-color: #FFE7E7;
+    border-radius: .6rem;
+
+    font-size: 2.6rem;
+    font-weight: 600;
+    line-height: 1.1;
+    color: #EF1516;
+}
+
+.sale__modal_end {
+    color: $color-dark;
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 1.6;
+    text-transform: uppercase;
+    margin-bottom: 1.8rem;
+    text-align: center;
+}
+
+.timer {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.6rem;
+    justify-content: center;
+    margin-bottom: 2.4rem;
+}
+
+.timer__item {
+    text-align: center;
+}
+
+.timer__dots {
+    color: #D63639;
+    font-size: 3.2rem;
+    font-weight: 600;
+    font-family: $font-second;
+    line-height: 1;
+    margin-top: 1rem;
+}
+
+.timer__time {
+    color: #D63639;
+    font-size: 5.2rem;
+    font-weight: 600;
+    line-height: 1;
+    margin-bottom: .6rem;
+}
+
+.timer__period {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #6B747C;
+    text-transform: uppercase;
+}
+
+.sale__modal_form_block {
+    background-color: #014661;
+    border-radius: .4rem;
+    padding: 2.4rem;
+    margin-bottom: 1.6rem;
+
+    @media screen and (max-width: $breakpoint-sm) {
+        padding: 2.4rem 2rem;
+    }
+}
+
+.sale__modal_form_title {
+    font-size: 2.2rem;
+    font-weight: 600;
+    line-height: 1.35;
+    color: #FFFFFF;
+    margin-bottom: .2rem;
+
+    @media screen and (max-width: $breakpoint-sm) {
+        font-size: 2rem;
+    }
+}
+
+.sale__modal_form_subtitle {
+    font-size: 1.4rem;
+    line-height: 1.3;
+    color: #FFFFFF;
+    margin-bottom: 1.8rem;
+}
+
+.sale__modal_form_bottom {
+    display: flex;
+    align-items: stretch;
+    gap: 1.2rem;
+
+    @media screen and (max-width: $breakpoint-sm) {
+        flex-wrap: wrap;
+    }
+}
+
+.sale__modal_form_input {
+    padding: 1.3rem 1.7rem;
+    border-radius: 1.3rem;
+    background-color: #FFFFFF;
+
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.4;
+    color: $color-dark;
+    width: 100%;
+
+    &::placeholder {
+        color: #6B747C;
+    }
+
+    @media screen and (max-width: $breakpoint-sm) {
+        width: calc((100% - 1.2rem) / 2);
+    }
+}
+
+.sale__modal_form_submit {
+    background-color: #D63639;
+    border-radius: 4.8rem;
+    font-size: 1.6rem;
+    line-height: 1.4;
+    font-weight: 600;
+    color: #FFFFFF;
+    min-width: 15rem;
+
+    @media screen and (max-width: $breakpoint-sm) {
+        width: 100%;
+        padding: 1.2rem 0;
+    }
+}
